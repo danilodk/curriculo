@@ -25,7 +25,7 @@ Desenvolvedor Full Stack entusiasmado com paixão por criar soluções inovadora
 
 ### 🌐 Idiomas
 - Português (Nativo)
-- Inglês (Fluente)
+- Inglês (intermediario)
 - Espanhol (Fluente)
 
 ---
@@ -71,7 +71,7 @@ Aplicação Python para consulta dinâmica de aniversariantes. Utiliza estrutura
 
 | Meio | Contato |
 |------|----------|
-| **WhatsApp** | 11 99888-2640 |
+| **WhatsApp** | 11 99682-2641 |
 | **Email** | damdanilo2020@icloud.com |
 | **LinkedIn** | [Danilo Araujo](https://www.linkedin.com/in/danilo-ara%C3%BAjo-3592501b8/) |
 | **GitHub** | [@danilodk](https://github.com/danilodk) |
