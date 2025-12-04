@@ -1,93 +1,360 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Araujo - Currículo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        h1 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <!-- Metadata and character encoding for proper rendering -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo profissional de Danilo Araujo - Full Stack Developer">
+  <meta name="author" content="Danilo Araujo">
+  <title>Danilo Araujo - Currículo Profissional</title>
+  
+  <!-- Comprehensive CSS Styling -->
+  <style>
+    /* ============================================
+       RESET E VARIÁVEIS GLOBAIS
+       ============================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --text-light: #ecf0f1;
+      --text-dark: #2c3e50;
+      --border-color: #bdc3c7;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ============================================
+       ESTILOS GERAIS DO CORPO
+       ============================================ */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* ============================================
+       CONTAINER PRINCIPAL
+       ============================================ */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    /* ============================================
+       CABEÇALHO PRINCIPAL
+       ============================================ */
+    header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: var(--text-light);
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    header .subtitle {
+      font-size: 1.1em;
+      opacity: 0.9;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    /* ============================================
+       CONTEÚDO PRINCIPAL
+       ============================================ */
+    .content {
+      padding: 30px;
+    }
+
+    section {
+      margin-bottom: 35px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    section h2 {
+      font-size: 1.5em;
+      color: var(--primary-color);
+      border-bottom: 3px solid var(--secondary-color);
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: '';
+      width: 4px;
+      height: 1.5em;
+      background-color: var(--secondary-color);
+      border-radius: 2px;
+    }
+
+    /* ============================================
+       PARÁGRAFOS E LISTAS
+       ============================================ */
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px 0 8px 30px;
+      position: relative;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    li strong {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    /* ============================================
+       LINKS
+       ============================================ */
+    a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    a:hover {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    /* ============================================
+       PROJETOS DESTACADOS
+       ============================================ */
+    .project-item {
+      background-color: #f8f9fa;
+      border-left: 4px solid var(--secondary-color);
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+      background-color: #e8f4f8;
+      border-left-color: var(--accent-color);
+      box-shadow: var(--shadow);
+    }
+
+    .project-item strong {
+      color: var(--primary-color);
+      font-size: 1.05em;
+    }
+
+    .project-item p {
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+
+    /* ============================================
+       SEÇÃO DE CONTATO
+       ============================================ */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .contact-item::before {
+      content: '→';
+      margin-right: 12px;
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      text-align: center;
+      padding: 20px 30px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    /* ============================================
+       RESPONSIVIDADE
+       ============================================ */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      header .subtitle {
+        font-size: 0.95em;
+      }
+
+      section h2 {
+        font-size: 1.3em;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Danilo Araujo</h1>
-        </header>
-        <section>
-            <h2>Sobre Mim</h2>
-            <p>Sou um desenvolvedor entusiasmado com paixão por criar soluções inovadoras. Sempre buscando aprender e aprimorar minhas habilidades em tecnologias web.</p>
-        </section>
-        <section>
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Linguagens: HTML5, CSS3, JavaScript, Python, Java, C, C#</li>
-                <li>Frameworks: Node.js, Express.js</li>
-                <li>Banco de Dados: MySQL, MongoDB, SQLite, MariaDB</li>
-                <li>Ferramentas: Git, NetBeans, Visual Studio Code</li>
-                <li>Outros: Inglês fluente, espanhol fluente</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Projetos Destacados</h2>
-            <ul>
-                <li>
-                    <strong><a href="https://github.com/danilodk/banco_dados_mais_formulario">Gerenciador de Produtos</a></strong>: Este projeto consiste em um sistema simples de gerenciamento de produtos desenvolvido utilizando Node.js, Express.js e SQLite. O sistema permite aos usuários adicionar, visualizar e excluir produtos, armazenando as informações em um banco de dados SQLite. Utilizando HTML5, CSS3 e JavaScript, o sistema oferece uma interface amigável para interação com o banco de dados, proporcionando uma experiência de usuário intuitiva e eficiente.
-                </li>
-                <li>
-                    <strong><a href="https://github.com/danilodk/pythonista">Pythonista</a></strong>: Este é um programa simples desenvolvido em Python para consultar os aniversariantes da igreja Reviver. Ele permite aos usuários visualizar os aniversariantes de cada mês de forma fácil e rápida. Utilizando pandas e tabulate, o programa apresenta os dados em um formato tabular elegante, proporcionando uma experiência de usuário intuitiva.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Contato</h2>
-            <ul>
-                <li>Whatsapp: 11 99888-2640</li>
-                <li>Email: <a href="mailto:damdanilo2020@icloud.com">damdanilo2020@icloud.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/danilo-ara%C3%BAjo-3592501b8/">Danilo Araujo</a></li>
-                <li>GitHub: <a href="https://github.com/danilodk">danilo_araujo</a></li>
-            </ul>
-        </section>
+  <!-- ============================================
+       CONTÊINER PRINCIPAL
+       ============================================ -->
+  <div class="container">
+    <!-- ============================================
+         CABEÇALHO
+         ============================================ -->
+    <header>
+      <h1>Danilo Araujo</h1>
+      <p class="subtitle">Full Stack Developer | Web Solutions | Database Design</p>
+    </header>
+
+    <!-- ============================================
+         CONTEÚDO PRINCIPAL
+         ============================================ -->
+    <div class="content">
+      <!-- SEÇÃO: Resumo Profissional -->
+      <section>
+        <h2>Resumo Profissional</h2>
+        <p>
+          Desenvolvedor Full Stack entusiasmado com paixão por criar soluções inovadoras e escaláveis. 
+          Com experiência em desenvolvimento web, gerenciamento de banco de dados e arquitetura de sistemas, 
+          busco constantemente aprender e aplicar as melhores práticas em tecnologias modernas. 
+          Fluente em português, inglês e espanhol.
+        </p>
+      </section>
+
+      <!-- SEÇÃO: Habilidades -->
+      <section>
+        <h2>Habilidades Técnicas</h2>
+        <ul>
+          <li><strong>Linguagens Frontend:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+          <li><strong>Linguagens Backend:</strong> Node.js, Python, Java, C, C#</li>
+          <li><strong>Banco de Dados:</strong> MySQL, MongoDB, SQLite, MariaDB</li>
+          <li><strong>Frameworks:</strong> Express.js, Node.js</li>
+          <li><strong>Ferramentas:</strong> Git, Visual Studio Code, NetBeans</li>
+          <li><strong>Bibliotecas Python:</strong> Pandas, Tabulate</li>
+          <li><strong>Idiomas:</strong> Português (Nativo), Inglês (Fluente), Espanhol (Fluente)</li>
+        </ul>
+      </section>
+
+      <!-- SEÇÃO: Projetos Destacados -->
+      <section>
+        <h2>Projetos Destacados</h2>
+        
+        <div class="project-item">
+          <strong><a href="https://github.com/danilodk/banco_dados_mais_formulario" target="_blank">Gerenciador de Produtos - Banco SQLite + Formulário HTML</a></strong>
+          <p><strong>Tecnologias:</strong> Node.js, Express.js, SQLite, HTML5, CSS3, JavaScript</p>
+          <p>
+            Sistema completo de gerenciamento de produtos com interface web responsiva. 
+            Implementa operações CRUD completas com armazenamento persistente em banco de dados SQLite. 
+            Interface intuitiva com validação de entrada, proteção contra XSS e tratamento robusto de erros.
+          </p>
+        </div>
+
+        <div class="project-item">
+          <strong><a href="https://github.com/danilodk/pythonista" target="_blank">Pythonista - Consultor de Aniversariantes</a></strong>
+          <p><strong>Tecnologias:</strong> Python, Pandas, Tabulate, SQLite</p>
+          <p>
+            Aplicação Python para consulta dinâmica de aniversariantes com integração de banco de dados. 
+            Utiliza estruturas de dados avançadas para organizar e apresentar informações em formato tabular elegante. 
+            Consultas por mês e período com manipulação eficiente de dados.
+          </p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO: Contato -->
+      <section>
+        <h2>Contato</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <strong>WhatsApp:</strong> <span style="margin-left: 10px;">11 99888-2640</span>
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong> <a href="mailto:damdanilo2020@icloud.com">damdanilo2020@icloud.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danilo-ara%C3%BAjo-3592501b8/" target="_blank">Danilo Araujo</a>
+          </div>
+          <div class="contact-item">
+            <strong>GitHub:</strong> <a href="https://github.com/danilodk" target="_blank">@danilodk</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO: Disponibilidade -->
+      <section>
+        <h2>Disponibilidade</h2>
+        <ul>
+          <li>Aberto para oportunidades profissionais</li>
+          <li>Disponível para colaborações e projetos</li>
+          <li>Interesse em trabalho remoto e presencial</li>
+        </ul>
+      </section>
     </div>
+
+    <!-- ============================================
+         RODAPÉ
+         ============================================ -->
+    <footer>
+      <p>&copy; 2025 Danilo Araujo | Currículo Profissional Online | Última atualização: Dezembro 2025</p>
+    </footer>
+  </div>
 </body>
 </html>
